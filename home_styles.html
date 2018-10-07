@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>GTA Custom Home Numbers</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="bundle.js"></script>
+</head>
+
+<body id="home-styles">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-trans">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                <a class="navbar-brand" href="index.html"><small><b>GTA</b> Custom Home Numbers</small></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li class="hidden-xs hidden-sm"><a style="padding-left:5px;padding-right:5px;"><i class="fa ion-minus fa-rotate-90"></i></a></li>
+                    <li>
+                        <a href="#" style="padding: 20px 5px;display:inline-block;">
+                            <i class="icon ion-android-call"></i>
+                            <span> &nbsp;<a class="phone-number" href="tel:+1-416-998-7659">416-998-7659</a> /
+                        <a class="phone-number" href="tel:+1-416-669-2144">416-669-2144</a></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="tel:+1-416-669-2144" class="phone-mobile hidden-lg hidden-md"><button class="btn btn-primary"><i class="icon ion-android-call"></i></button></a>
+    </nav>
+    <div class="banner-fixed banner-1"></div>
+    <div class="blurbox-container blurbox-background banner-1"></div>
+    <div class="container-fluid home-styles-container">
+        <h4 class="text-center heading" style="font-family:Roboto; font-weight:300;">GTA Styles</h4>
+        <hr class="under-heading">
+        <div class="container-fuild remove-padding text-left">
+            <form class="form-horizontal home-style-form">
+                <fieldset>
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <input type="text" class="form-control" id="inputname" name="Name" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <input type="address" class="form-control" name="Home_address" placeholder="Home Address" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <input type="tel" class="form-control" name="Mobile_number" placeholder="Telephone Number" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <input type="password" class="form-control" name="passcode" placeholder="Passcode" required>
+                            <p class="error-msg text-danger" id="passcode_msg">Invalid passcode. Please try again</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-12 text-right">
+                            <button type="submit" class="btn btn-primary btn-md btn-block">Generate My Home Styles</button>
+                            <p class="error-msg text-danger" id="recaptcha_msg">Please verify before you submit</p>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="container-fuild remove-padding samples-container">
+            <div class="col-md-2 col-lg-2 hidden-sm hidden-xs"></div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 center-block sample-input">
+                <input type="text" class="form-control" placeholder="Enter Your Home Address">
+            </div>
+            <div class="col-md-2 col-lg-2 hidden-sm hidden-xs">
+            </div>
+            <div class="container-fluid">
+                <div class="col-md-2 col-lg-2 hidden-sm hidden-xs"></div>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 center-block text-center">
+                    <p style="margin-top:8px"><i class="ion-ios-information fa-lg"></i> Tap on your favourite style to order now.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 hidden-sm hidden-xs">
+                </div>
+            </div>
+            <div class="container-fluid remove-padding sample-display">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-xs-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>A</b>
+                            <i class="ion-ios-heart"></i></span>
+                        <input type="text" class="form-control fa-1" readonly>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-xs-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>B</b>
+                            <i class="ion-ios-heart"></i></span>
+                        <input type="text" class="form-control fa-2" readonly>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-xs-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>C</b>
+                            <i class="ion-ios-heart"></i></span>
+                        <input type="text" class="form-control fa-3" readonly>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-xs-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>D</b>
+                            <i class="ion-ios-heart"></i></span>
+                        <input type="text" class="form-control fa-4" readonly>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-xs-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>E</b>
+                            <i class="ion-ios-heart"></i>
+                        </span>
+                        <input type="text" class="form-control fa-5" readonly>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-xs-4">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <b>F</b>
+                            <i class="ion-ios-heart"></i>
+                        </span>
+                        <input type="text" class="form-control fa-6" readonly>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-xs-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>G</b>
+                            <i class="ion-ios-heart"></i></span>
+                        <input type="text" class="form-control fa-7" readonly>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-xs-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>H</b>
+                            <i class="ion-ios-heart"></i></span>
+                        <input type="text" class="form-control fa-8" readonly>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-xs-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>I</b>
+                            <i class="ion-ios-heart"></i></span>
+                        <input type="text" class="form-control fa-9" readonly>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-xs-4 hidden-sm hidden-xs"></div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-xs-4">
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>J</b>
+                            <i class="ion-ios-heart"></i></span>
+                        <input type="text" class="form-control fa-10" readonly>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-xs-4 hidden-sm hidden-xs"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pull-right">
+                <button confirm-order class="btn btn-block btn-default disabled"><b>Confirm Order</b></button>
+            </div>
+        </div>
+</body>
+
+</html>

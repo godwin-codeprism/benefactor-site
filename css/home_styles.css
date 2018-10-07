@@ -1,0 +1,195 @@
+#home-styles .banner-fixed,
+#home-styles .blurbox-container {
+    height: 100%;
+}
+
+#home-styles .banner-1 {
+    background-size: cover;
+}
+
+.home-styles-container {
+    width: 40%;
+    min-width: 300px;
+    min-height: 580px;
+    background-color: rgba(255, 255, 255, 0.77);
+    position: relative;
+    margin-top: 80px;
+    border-radius: 5px;
+    border-top: 8px inset #212121;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+    transition: all .51s ease;
+    margin-bottom: 50px;
+}
+
+.home-styles-container .form-group {
+    margin-bottom: 35px;
+}
+
+.home-styles-container .form-group input {
+    height: 55px;
+}
+
+.samples-container {
+    display: none;
+}
+
+.sample-input {
+    height: 80px;
+    border-radius: 50px;
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    box-shadow: 0px 0px 16px #f78c9f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sample-input input {
+    width: 95%;
+    border: none !important;
+    box-shadow: 0px 0px 5px #bd223c inset !important;
+    text-align: center;
+}
+
+.sample-display div {
+    padding: 15px 15px;
+}
+
+.sample-display input {
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+@media (max-width:400px) {
+    .home-styles-container {
+        width: 95%;
+    }
+}
+
+.fa-1 {
+    font-family: MonotypeCorsiva;
+    font-size: x-large !important;
+}
+
+.fa-2 {
+    font-family: Great Vibes;
+    font-size: x-large !important;
+}
+
+.fa-3 {
+    font-family: SnellRoundhand;
+    font-size: x-large !important;
+}
+
+.fa-4 {
+    font-family: BrushScript;
+    font-size: x-large !important;
+}
+
+.fa-5 {
+    font-family: SignPainter;
+    font-size: x-large !important;
+}
+
+.fa-6 {
+    font-family: EdwardianScript;
+    font-size: x-large !important;
+}
+
+.fa-7 {
+    font-family: DianaScript;
+    font-size: x-large !important;
+}
+
+.fa-8 {
+    font-family: ALSScript;
+    font-size: x-large !important;
+}
+
+.fa-9 {
+    font-family: CacChampagne;
+    font-size: x-large !important;
+}
+
+.fa-10 {
+    font-family: TimesNewRoman;
+    font-size: x-large !important;
+}
+
+.input-group-addon {
+    background-image: linear-gradient(210deg, #f093fb, #f5576c);
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all .15s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.input-group .form-control {
+    border: 2px solid #ddd;
+}
+
+.input-group .form-control:focus {
+    border: 2px solid #212121;
+}
+
+.input-group-addon i {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 43px;
+    color: #E91E63;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.33);
+    z-index: 0;
+    display: none;
+    animation: bounceIn 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.input-group-addon b {
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    font-size: medium;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.33);
+}
+
+.input-group.active .input-group-addon i {
+    display: initial;
+}
+
+.input-group.active .input-group-addon {
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.input-group.active input {
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    color: white;
+    border: 1px solid transparent !important;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.37) !important;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    background-color: rgba(34, 34, 34, 0.98);
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.5);
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    padding-top: 15px;
+    animation: slideInUp .51s ease;
+    display: none;
+}
+
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default {
+    background-color: rgba(245, 245, 245, 0.54) !important;
+    color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+}
