@@ -7,7 +7,7 @@ font-weight: 500;
 /* text-shadow: 0px 0px 0px; */
 }
 
-h1,h2,h3,h4{
+h1,h2,h3,h4,h5{
     margin-top: 15px;
     margin-bottom: 15px;
     color: #ee1b21;
@@ -66,6 +66,15 @@ h1,h2,h3,h4{
 .navbar-brand{
     padding: 25.5px 15px;
     color: #ee1b21;
+}
+.navbar-toggle{
+    background: #ee1b21;
+    border-radius: 0px;
+    -webkit-box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.navbar-toggle .icon-bar{
+    background: #ffffff;
 }
 .bnf-glb-btn{
     outline: none;
@@ -243,7 +252,13 @@ h1,h2,h3,h4{
 .bnf-contct-mini-ctnt{
     background: rgba(255, 255, 255,0.9);
     padding: 15px;
-} 
+}
+address{
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.8);
+}
 /*-------------------------------------------
  -----------contact page styles Ends-------------*/
 
@@ -292,4 +307,18 @@ select:focus, select.form-control:focus{
     padding-top: 28px;
     padding-bottom: 28px;
 }
+}
+@media (max-width:600px){
+    body{
+        font-size: 12px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    .navbar-brand {
+        font-size: 20px;
+    }
 }
