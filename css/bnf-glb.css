@@ -301,6 +301,30 @@ select:focus, select.form-control:focus{
     font-size: 16px;
     border-radius: 20px
 }
+#go-up {
+    position: fixed;
+    height: 40px;
+    bottom: 30px;
+    line-height: 40px;
+    right: 15px;
+    font-size: 25px;
+    visibility: hidden;
+    transition: all .25s ease-in-out;
+    transform: translate3d(0px, 80px, 0px);
+    -webkit-transform: translate3d(0px, 80px, 0px);
+    -moz-transform: translate3d(0px, 80px, 0px);
+    background-color: #ee1b21;
+    color: #ffffff;
+}
+#go-up:hover{
+    border-radius: 50%;
+}
+.go-up-show {
+    visibility: visible !important;
+    transform: translate3d(0px, 0px, 0px) !important;
+    -webkit-transform: translate3d(0px, 0px, 0px) !important;
+    -moz-transform: translate3d(0px, 0px, 0px) !important;
+}
 @media screen and (max-width: 990px){
     .serviceBox{
         margin:60px auto 0;
@@ -326,5 +350,8 @@ select:focus, select.form-control:focus{
     }
     .navbar-brand {
         font-size: 20px;
+    }
+    #go-up{
+        border-radius: 50%;
     }
 }

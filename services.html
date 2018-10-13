@@ -168,14 +168,32 @@
 
         </div>
     </footer>
+    <div class="go-up-btn-ctnr">
+        <button class="bnf-glb-btn bnf-sclbtn" id="go-up"><i class="ion ion-ios-arrow-up"></i> </button>
+    </div>
     <script>
+        var bnfPageY,bnfBodyTop;
         $(document).ready(function () {
-            $(".bnf-hilt-btn").on("click", bnfFormCtnrPosition);
+            $("#go-up").on("click", goUp)
         });
+        $(document).scroll(function () {
+            goTop();
 
-        function bnfFormCtnrPosition() {
-            var position = $(".bnf-btm-ctnr").offset().top;
-            $("HTML, BODY").animate({ scrollTop: position }, 1000);
+        });
+      
+        function goUp() {
+            $("html,body").animate({
+                scrollTop: 0
+            }, 300);
+        }
+        function goTop() {
+            bnfPageY = window.pageYOffset;
+            bnfBodyTop = $(".bnf-bdy-ctnt").offset().top;
+            if (bnfPageY >= bnfBodyTop) {
+                $("#go-up").addClass("go-up-show");
+            } else {
+                $("#go-up").removeClass("go-up-show");
+            }
         }
     </script>
 </body>

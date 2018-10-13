@@ -269,7 +269,7 @@
                                     <option>Local Home Daily US/Canada</option>
                                     <option>Long Haul Canada</option>
                                     <option>Long Haul US/Canada</option>
-                                </select>s
+                                </select>
                                 <p class="error-msg">Please Choose at least one option.</p>
                             </div>
                             <div class="form-group">
@@ -278,7 +278,7 @@
                                     placeholder="Please Provide Additional Details:(tickets/convictions, what type of job you expect and comments,date available to start)"></textarea>
                             </div>
                             <p class="error-msg">Please Enter Additional Details.</p>
-                            <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn">Submit</button>
+                            <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn"><span><i class="fa fa-paper-plane"></i></span>&nbsp;Submit</button>
                         </form>
                     </div>
                 </div>
@@ -296,7 +296,8 @@
                         <li><a href="services.html">Services</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#"><span><i class="ion ion-headphone"></i></span>&nbsp;24/7 SUPPORT &nbsp;<span><i class="ion ion-ios-telephone"></i></span>&nbsp;905-670-1049.</a></li>
+                        <li><a href="#"><span><i class="ion ion-headphone"></i></span>&nbsp;24/7 SUPPORT &nbsp;<span><i
+                                        class="ion ion-ios-telephone"></i></span>&nbsp;905-670-1049.</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4">
@@ -313,14 +314,36 @@
 
         </div>
     </footer>
+    <div class="go-up-btn-ctnr">
+        <button class="bnf-glb-btn bnf-sclbtn" id="go-up"><i class="ion ion-ios-arrow-up"></i> </button>
+    </div>
     <script>
+        var bnfPageY,bnfBodyTop;
         $(document).ready(function () {
             $(".bnf-hilt-btn").on("click", bnfFormCtnrPosition);
+            $("#go-up").on("click", goUp)
         });
+        $(document).scroll(function () {
+            goTop();
 
+        });
         function bnfFormCtnrPosition() {
             var position = $(".bnf-btm-ctnr").offset().top;
             $("HTML, BODY").animate({ scrollTop: position }, 1000);
+        }
+        function goUp() {
+            $("html,body").animate({
+                scrollTop: 0
+            }, 300);
+        }
+        function goTop() {
+            bnfPageY = window.pageYOffset;
+            bnfBodyTop = $(".bnf-bdy-ctnt").offset().top;
+            if (bnfPageY >= bnfBodyTop) {
+                $("#go-up").addClass("go-up-show");
+            } else {
+                $("#go-up").removeClass("go-up-show");
+            }
         }
     </script>
 </body>

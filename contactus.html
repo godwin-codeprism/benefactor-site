@@ -125,7 +125,7 @@
                                         <p class="error-msg">Enter Comments.</p>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn">Submit</button>
+                                    <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn"><span><i class="fa fa-paper-plane"></i></span>&nbsp;Send</button>
                                 </div>
 
                             </form>
@@ -188,7 +188,36 @@
             </div>
 
         </div>
-    </footer>
+    </footer> 
+    <div class="go-up-btn-ctnr">
+        <button class="bnf-glb-btn bnf-sclbtn" id="go-up"><i class="ion ion-ios-arrow-up"></i> </button>
+    </div>
+    <script>
+        var bnfPageY,bnfBodyTop;
+        $(document).ready(function () {
+            $("#go-up").on("click", goUp)
+        });
+        $(document).scroll(function () {
+            goTop();
+
+        });
+      
+        function goUp() {
+            $("html,body").animate({
+                scrollTop: 0
+            }, 300);
+        }
+        function goTop() {
+            bnfPageY = window.pageYOffset;
+            bnfBodyTop = $(".bnf-bdy-ctnt").offset().top;
+            if (bnfPageY >= bnfBodyTop) {
+                $("#go-up").addClass("go-up-show");
+            } else {
+                $("#go-up").removeClass("go-up-show");
+            }
+        }
+    </script>
+
 </body>
 
 </html>
