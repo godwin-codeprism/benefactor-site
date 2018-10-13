@@ -217,7 +217,8 @@ h1,h2,h3,h4,h5{
 .bnf-whtbg-shw{
     border-top: 2px solid #ee1b21;
     box-shadow: 0 3px 17px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
-    background: #ffffff;
+    /* background: #ffffff; */
+    background: rgba(255,255,255,0.9);
 }
 .bnf-well{
     border: none;
