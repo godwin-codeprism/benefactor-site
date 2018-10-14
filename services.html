@@ -18,6 +18,11 @@
     <title>BENEFACTOR</title>
     <link href="https://fonts.googleapis.com/css?family=KoHo|Pridi" rel="stylesheet">
     <script src="bundle.js"></script>
+    <style>.outline-shdw{
+        border: none;
+        border-top: none;
+        box-shadow: inset 0px 0px 10px 1px rgb(238, 27, 33);
+    }</style>
 </head>
 
 <body>
@@ -31,13 +36,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Benefactor Logistics Limited</a>
+                    <a class="navbar-brand" href="#"><img src="./img/benfactor-2.jpeg" alt="Benefactor"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right bnf-nvbr-nv">
                         <li><a href="index.html">Home</a></li>
                         <li class="active"><a href="services.html">Services</a></li>
-                        <li><a href="#">About</a></li>
+                        <!-- <li><a href="#">About</a></li> -->
                         <li><a href="contactus.html">Contact</a></li>
                     </ul>
                 </div>
@@ -87,9 +92,9 @@
     <!-- bnf Body container -->
     <div class="bnf-bdy-ctnt">
 
-        
+
         <div class="bnf-glb-ctnr container">
-            <div class="row bnf-glb-ctnt bnf-hdr-glb-ctnt">
+            <div class="row bnf-glb-ctnt bnf-hdr-glb-ctnt outline-shdw">
                 <h3 class="text-center">Freight Services</h3>
                 <div class="clearfix">
                     <div class="col-sm-5">
@@ -98,10 +103,11 @@
                     <div class="col-sm-7">
                         <p class="hidden-xs">&nbsp;</p>
                         <p class="hidden-xs">&nbsp;</p>
-                        <p>We are an asset based carrier with a strong network of carrier partners who are on standby to
+                        <p>We are an asset based carrier with a strong network of carrier partners who are on standby
+                            to
                             get your load to its destination. We are small enough to care and big enough to get the job
                             done. You can trust us to move your freight within your time frame and on budget.</p>
-                   
+
                     </div>
                 </div>
 
@@ -109,8 +115,10 @@
                     <div class="col-sm-7">
                         <p class="hidden-xs">&nbsp;</p>
                         <p class="hidden-xs">&nbsp;</p>
-                        <p>Whether you are moving a skid to Windsor or need 20 Truckloads to Montreal and Atlanta - we are
-                            here to get the job done. We got you covered! Contact us today by phone at 416-669-2144 or fill
+                        <p>Whether you are moving a skid to Windsor or need 20 Truckloads to Montreal and Atlanta - we
+                            are
+                            here to get the job done. We got you covered! Contact us today by phone at 416-669-2144 or
+                            fill
                             out this form to get a Quick Quote in minutes. </p>
                     </div>
                     <div class="col-sm-5">
@@ -120,8 +128,8 @@
             </div>
         </div>
         <div class="bnf-glb-ctnr container">
-            <div class="row bnf-glb-ctnt bnf-whtbg-shw text-center" style="border:none;padding:15px">
-             
+            <div class="row bnf-glb-ctnt bnf-whtbg-shw text-center outline-shdw" style="padding:15px">
+
                 <div class="col-sm-6">
                     <img src="./img/bnf-img1.png" class="img-responsive" alt="OUR FLEET NETWORK">
                 </div>
@@ -137,7 +145,7 @@
                 </div>
             </div>
         </div>
-     
+
     </div>
     <!-- bnf Body container End-->
     <!-- bnf Footer Section -->
@@ -148,7 +156,7 @@
                     <ul class="bnf-ftr-li-ctnr links-ctnr">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="#">About</a></li>
+                        <!-- <li><a href="#">About</a></li> -->
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="#"><span><i class="ion ion-headphone"></i></span>&nbsp;24/7 SUPPORT &nbsp;<span><i
                                         class="ion ion-ios-telephone"></i></span>&nbsp;905-670-1049.</a></li>
@@ -172,7 +180,7 @@
         <button class="bnf-glb-btn bnf-sclbtn" id="go-up"><i class="ion ion-ios-arrow-up"></i> </button>
     </div>
     <script>
-        var bnfPageY,bnfBodyTop;
+        var bnfPageY, bnfBodyTop;
         $(document).ready(function () {
             $("#go-up").on("click", goUp)
         });
@@ -180,7 +188,7 @@
             goTop();
 
         });
-      
+
         function goUp() {
             $("html,body").animate({
                 scrollTop: 0
