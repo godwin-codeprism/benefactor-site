@@ -277,6 +277,70 @@ address{
 /*-------------------------------------------
  -----------contact page styles Ends-------------*/
 
+/*-------------- Popup Styles------------- */
+.bnf-quick-fixed-btn:focus,
+        .bnf-quick-fixed-btn:active,
+        .bnf-quick-fixed-btn {
+            position: fixed;
+            top: 25vh;
+            right: -43px;
+            z-index: 111;
+            transform: rotate(90deg);
+            border-radius: 0px !important;
+        }
+        .modal.fade .modal-dialog {
+            opacity: 0;
+            -webkit-transform: scale(0.1);
+            -ms-transform: scale(0.1);
+            -o-transform: scale(0.1);
+            transform: scale(0.1);
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+    
+    
+    
+            .modal.fade.in .modal-dialog {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+                transform: scale(1);
+                -webkit-transform: translate3d(0%, 0, 0);
+                -ms-transform: translate3d(0%, 0, 0);
+                -o-transform: translate3d(0%, 0, 0);
+                transform: translate3d(0%, 0, 0);
+            }
+    
+ 
+        .modal-content {
+            border: none;
+            border-radius: 2px;
+            -webkit-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 40px 77px rgba(0, 0, 0, 0.22), 0 27px 24px rgba(0, 0, 0, 0.2);
+        }
+    
+         
+                          .modal-footer .btn + .btn {
+                    margin-left: 0;
+                }
+    
+                    .modal-footer .btn + .btn:last-child {
+                        margin-left: -4px;
+                    }
+                    .modal-header{
+                        padding: 0px;
+                        text-align: center;
+                    }
+                    .modal-footer,
+                    .modal-body{
+                        padding: 10px;
+                    }
+/*-------------------- Popup styles end --------------*/
+
 footer{
     background: #282828;
     color: #f5f5f5;

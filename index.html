@@ -31,12 +31,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="./img/benfactor-2.jpeg" alt="Benefactor"></a>
+                    <a class="navbar-brand" href="#"><img src="./img/Benefactor-Logo.jpeg" alt="Benefactor"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right bnf-nvbr-nv">
                         <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="services.html">Freight Services</a></li>
                         <!-- <li><a href="#">About</a></li> -->
                         <li><a href="contactus.html">Contact</a></li>
                     </ul>
@@ -293,7 +293,7 @@
                 <div class="col-sm-8">
                     <ul class="bnf-ftr-li-ctnr links-ctnr">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="services.html">Freight Services</a></li>
                         <!-- <li><a href="#">About</a></li> -->
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="#"><span><i class="ion ion-headphone"></i></span>&nbsp;24/7 SUPPORT &nbsp;<span><i
@@ -314,11 +314,54 @@
 
         </div>
     </footer>
+    <div class="btn btn-default bnf-glb-btn bnf-frm-btn bnf-quick-fixed-btn" data-toggle="modal" data-target="#myModal">Quick Note</div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                    <h4 class="modal-title">Quick Quote</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Best rates and on time delivery. Your load is our responsibility.Please fill out form below & a team member will contact you with a Quick Quote</p>
+                    <div class="bnf-quick-form-ctnr clearfix">
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile">Phone Number:</label>
+                                <input type="text" class="form-control" id="mobie">
+                            </div>
+                            <div class="form-group">
+                                <label for="cname">Company Name:</label>
+                                <input type="text" class="form-control" id="cname">
+                            </div>
+                            <div class="form-group">
+                                <label for="mail">Email:</label>
+                                <input type="email" class="form-control" id="mail">
+                            </div>
+
+                            <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger bnf-glb-btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <div class="go-up-btn-ctnr">
         <button class="bnf-glb-btn bnf-sclbtn" id="go-up"><i class="ion ion-ios-arrow-up"></i> </button>
     </div>
     <script>
-        var bnfPageY,bnfBodyTop;
+        var bnfPageY, bnfBodyTop;
         $(document).ready(function () {
             $(".bnf-hilt-btn").on("click", bnfFormCtnrPosition);
             $("#go-up").on("click", goUp)
