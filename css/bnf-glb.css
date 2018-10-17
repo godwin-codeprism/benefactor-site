@@ -249,6 +249,12 @@ max-height: 80px;
     line-height: 35px;
     width: 40px;
 }
+.bnf-pd{
+    padding: 10px;
+}
+.bnf-img-shw{
+    box-shadow: 0px 0px 4px 0px rgb(238, 27, 33);
+}
 /*-------------------------------------------
  -----------contact page styles -------------*/
 .bnf-contct-mn-ctnr{
