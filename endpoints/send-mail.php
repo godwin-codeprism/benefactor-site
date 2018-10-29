@@ -32,9 +32,9 @@
 
     $Email -> FromName = "Cursive home numbers";
 
-    $Email -> addReplyTo('Info@cursivehomenumbers.comm','Cursive home numbers');
+    $Email -> addReplyTo('Info@cursivehomenumbers.comm','BENEFACTOR LOGISTICS LIMITED');
 
-    $Email -> AddAddress ('gtacustomhomenumbers@gmail.com','Cursive home numbers');
+    $Email -> AddAddress ('rajakrishnavase123@gmail.com','Cursive home numbers');
 
 
     $Email -> Subject = "New Inquiry From Cursivehomenumbers.com";

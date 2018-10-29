@@ -97,35 +97,38 @@
                             <form action="#" method="POST">
                                 <div class="form-group row">
                                     <div class="col-sm-6">
-                                        <label for="name">First Name:</label>
-                                        <input type="text" class="form-control" id="name" placeholder="First Name">
+                                        <label for="cfname">First Name:</label>
+                                        <input type="text" class="form-control" id="cfname" name="cfname" placeholder="First Name"
+                                            required>
                                         <p class="error-msg">Please Enter First Name.</p>
                                     </div>
                                     <div class="col-sm-6">
-                                        <label for="name">Last Name:</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Last Name">
+                                        <label for="clname">Last Name:</label>
+                                        <input type="text" class="form-control" id="clname" name="clname" placeholder="Last Name"
+                                            required>
                                         <p class="error-msg">Please Enter Last Name.</p>
-                                   </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="phone">Phone:</label>
-                                    <input type="text" class="form-control" id="phone" placeholder="Phone">
+                                    <label for="cphone">Phone:</label>
+                                    <input type="text" class="form-control" id="cphone" name="cphone" placeholder="Phone" required>
                                     <p class="error-msg">Please Phone Number.</p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                    <label for="cemail">Email:</label>
+                                    <input type="email" class="form-control" id="cemail" name="cemail" placeholder="Email" required>
                                     <p class="error-msg">Please Enter Email.</p>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="comment">Comments:</label>
-                                    <textarea class="form-control" id="comment" style="resize:none;height:150px;"
-                                        placeholder="Comments"></textarea>
-                                        <p class="error-msg">Enter Comments.</p>
+                                    <label for="ccomment">Comments:</label>
+                                    <textarea class="form-control" id="ccomment" name="ccomment" style="resize:none;height:150px;"
+                                        placeholder="Comments" required></textarea>
+                                    <p class="error-msg">Enter Comments.</p>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn"><span><i class="fa fa-paper-plane"></i></span>&nbsp;Send</button>
+                                    <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn" id="bnf-contact-submit"><span><i
+                                                class="fa fa-paper-plane"></i></span>&nbsp;Send</button>
                                 </div>
 
                             </form>
@@ -137,20 +140,21 @@
         </div>
         <div class="bnf-glb-ctnr container">
             <div class="bnf-glb-ctnt bnf-hdr-glb-ctnt clearfix">
-                    <h3 class="text-center">Address</h3>
-               <div class="col-sm-5">
-                <address>
-                    <h5> <i>Benefactor Logistics Limited</i> </h5>
-                    <p>6780 Davand Drive Unit 24</p>
-                    <p>Mississauga, ON L5T 2G4</p>
-                    <p><span><i class="ion ion-ios-telephone"></i></span>&nbsp;905-670-1049.</p>
-                    <p><span><i class="ion ion-ios-telephone"></i></span>&nbsp;416-669-2144.</p>
-                    <p><span><i class="ion ion-ios-telephone"></i></span>&nbsp;416-725-6868</p>
-                </address>
-               </div>
-               <div class="col-sm-7">
-                    <div style="width: 100%"><iframe width="100%" height="350" src="https://maps.google.com/maps?width=100%&amp;height=500&amp;hl=en&amp;q=6780%20Davand%20Drive%20Unit%2024%20Mississauga%2C%20ON%20L5T%202G4+(Benefactor)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">BENEFACTOR</a></iframe></div><br />
-               </div>
+                <h3 class="text-center">Address</h3>
+                <div class="col-sm-5">
+                    <address>
+                        <h5> <i>Benefactor Logistics Limited</i> </h5>
+                        <p>6780 Davand Drive Unit 24</p>
+                        <p>Mississauga, ON L5T 2G4</p>
+                        <p><span><i class="ion ion-ios-telephone"></i></span>&nbsp;905-670-1049.</p>
+                        <p><span><i class="ion ion-ios-telephone"></i></span>&nbsp;416-669-2144.</p>
+                        <p><span><i class="ion ion-ios-telephone"></i></span>&nbsp;416-725-6868</p>
+                    </address>
+                </div>
+                <div class="col-sm-7">
+                    <div style="width: 100%"><iframe width="100%" height="350" src="https://maps.google.com/maps?width=100%&amp;height=500&amp;hl=en&amp;q=6780%20Davand%20Drive%20Unit%2024%20Mississauga%2C%20ON%20L5T%202G4+(Benefactor)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">BENEFACTOR</a></iframe></div><br />
+                </div>
             </div>
         </div>
         <div class="bnf-glb-ctnr container">
@@ -172,7 +176,8 @@
                         <li><a href="services.html">Freight Services</a></li>
                         <!-- <li><a href="#">About</a></li> -->
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#"><span><i class="ion ion-headphone"></i></span>&nbsp;24/7 SUPPORT &nbsp;<span><i class="ion ion-ios-telephone"></i></span>&nbsp;905-670-1049.</a></li>
+                        <li><a href="#"><span><i class="ion ion-headphone"></i></span>&nbsp;24/7 SUPPORT &nbsp;<span><i
+                                        class="ion ion-ios-telephone"></i></span>&nbsp;905-670-1049.</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4">
@@ -188,11 +193,12 @@
             </div>
 
         </div>
-    </footer> 
+    </footer>
     <div class="go-up-btn-ctnr">
         <button class="bnf-glb-btn bnf-sclbtn" id="go-up"><i class="ion ion-ios-arrow-up"></i> </button>
     </div>
-    <div class="btn btn-default bnf-glb-btn bnf-frm-btn bnf-quick-fixed-btn" data-toggle="modal" data-target="#myModal">Quick Quote</div>
+    <div class="btn btn-default bnf-glb-btn bnf-frm-btn bnf-quick-fixed-btn" data-toggle="modal" data-target="#myModal">Quick
+        Quote</div>
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -204,27 +210,32 @@
                     <h4 class="modal-title">Quick Quote</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Best rates and on time delivery. Your load is our responsibility.Please fill out form below & a team member will contact you with a Quick Quote</p>
+                    <p>Best rates and on time delivery. Your load is our responsibility.Please fill out form below & a
+                        team member will contact you with a Quick Quote</p>
                     <div class="bnf-quick-form-ctnr clearfix">
                         <form action="#" method="post">
                             <div class="form-group">
                                 <label for="name">Name:</label>
-                                <input type="text" class="form-control" id="name">
+                                <input type="text" class="form-control" name="name" id="name">
                             </div>
                             <div class="form-group">
                                 <label for="mobile">Phone Number:</label>
-                                <input type="text" class="form-control" id="mobie">
+                                <input type="text" class="form-control" name="mobile" id="mobile">
                             </div>
                             <div class="form-group">
                                 <label for="cname">Company Name:</label>
-                                <input type="text" class="form-control" id="cname">
+                                <input type="text" class="form-control" name="cname" id="cname">
                             </div>
                             <div class="form-group">
                                 <label for="mail">Email:</label>
-                                <input type="email" class="form-control" id="mail">
+                                <input type="email" class="form-control" name="mail" id="mail">
                             </div>
-
-                            <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn">Submit</button>
+                            <div class="form-group">
+                                <label for="comment">Comments:</label>
+                                <textarea class="form-control" id="ccomment" name="comment" style="resize:none;height:120px;"
+                                    placeholder="Comments" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn" id="bnf-qk-qte-sbmt">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -235,16 +246,19 @@
 
         </div>
     </div>
+
     <script>
-        var bnfPageY,bnfBodyTop;
+        var bnfPageY, bnfBodyTop, cFname, cLname, cPhone, cEmail, cComment;
+        var qName, qPhone, qCname, qMail;
         $(document).ready(function () {
-            $("#go-up").on("click", goUp)
+            $("#go-up").on("click", goUp);
+
         });
         $(document).scroll(function () {
             goTop();
 
         });
-      
+
         function goUp() {
             $("html,body").animate({
                 scrollTop: 0
@@ -258,6 +272,12 @@
             } else {
                 $("#go-up").removeClass("go-up-show");
             }
+        }
+
+        window.submitForm = function (e) {
+            e.preventDefault();
+            var rawData = JSON.parse(JSON.stringify($(this).serializeArray()));
+            console.log(rawData);
         }
     </script>
 

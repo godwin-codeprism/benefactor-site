@@ -106,8 +106,7 @@
                 <div class="col-md-4 col-sm-4">
                     <div class="serviceBox">
                         <div class="service-icon bnf-serv-img">
-                            <img src="./img/Benefactor-Logo.jpeg" class="img-responsive" style="margin:0 auto;"
-                                alt="Full Truckload">
+                            <img src="./img/Benefactor-Logo.jpeg" class="img-responsive" style="margin:0 auto;" alt="Full Truckload">
                         </div>
                         <h3>Full Truckload</h3>
                         <p>Just tell us the origin and destination – the rest we will get done. On Time Every Time!
@@ -142,7 +141,7 @@
                         <a class="read" href="#">Read more</a>
                     </div>
                 </div>
-            
+
             </div>
         </div>
         <div class="bnf-glb-ctnr container">
@@ -150,14 +149,14 @@
                 <h3>OUR FLEET NETWORK</h3>
                 <div class="col-sm-6">
                     <div class="bnf-pd">
-                            <img src="./img/bnf-img1.jpg" class="img-responsive" alt="OUR FLEET NETWORK">
+                        <img src="./img/bnf-img1.jpg" class="img-responsive" alt="OUR FLEET NETWORK">
                     </div>
-                   
+
                 </div>
                 <div class="col-sm-6">
-                   
+
                     <div class="bnf-pd">
-                            <img src="./img/bnf-img4.png" class="img-responsive bnf-img-shw" alt="OUR FLEET NETWORK">
+                        <img src="./img/bnf-img4.png" class="img-responsive bnf-img-shw" alt="OUR FLEET NETWORK">
                     </div>
                 </div>
             </div>
@@ -222,22 +221,22 @@
                         <form action="#" method="POST">
                             <div class="form-group">
                                 <!-- <label for="name">Name:</label> -->
-                                <input type="text" class="form-control" id="name" placeholder="Name">
+                                <input type="text" class="form-control" id="hname" name="hname" placeholder="Name" required>
                                 <p class="error-msg">Please Enter Name.</p>
                             </div>
                             <div class="form-group">
                                 <!-- <label for="phone">Phone:</label> -->
-                                <input type="text" class="form-control" id="phone" placeholder="Phone">
+                                <input type="text" class="form-control" id="hphone" name="hphone"  placeholder="Phone" required>
                                 <p class="error-msg">Please Enter Phone Number.</p>
                             </div>
                             <div class="form-group">
                                 <!-- <label for="email">Email:</label> -->
-                                <input type="email" class="form-control" id="email" placeholder="Email">
+                                <input type="email" class="form-control" id="hemail" name="hemail"  placeholder="Email" required>
                                 <p class="error-msg">Please Enter Email.</p>
                             </div>
                             <div class="form-group">
                                 <!-- <label for="sel1">Commercial Driving Experience:</label> -->
-                                <select class="form-control" id="sel1">
+                                <select class="form-control" id="hexep" name="hexep" required>
                                     <option selected="true" disabled="disabled">--Select Commercial Driving
                                         Experience--</option>
                                     <option>Less than 1 year</option>
@@ -249,7 +248,7 @@
                             </div>
                             <div class="form-group">
                                 <!-- <label for="sel2">Position Interested In:</label> -->
-                                <select class="form-control" id="sel2">
+                                <select class="form-control" id="hposition" name="hposition" required>
                                     <option selected="true" disabled="disabled">--Position Interested In--</option>
                                     <option>Company Driver</option>
                                     <option>Owner Operator</option>
@@ -258,7 +257,7 @@
                             </div>
                             <div class="form-group">
                                 <!-- <label for="sel3">Mileage Requested:</label> -->
-                                <select class="form-control" id="sel3">
+                                <select class="form-control" id="hmilleage" name="hmilleage" required>
                                     <option selected="true" disabled="disabled">--Mileage Requested--</option>
                                     <option>Local Home Daily Ontario</option>
                                     <option>Local Home Daily US/Canada</option>
@@ -269,11 +268,13 @@
                             </div>
                             <div class="form-group">
                                 <!-- <label for="comment">Please Provide Additional Details:</label> -->
-                                <textarea class="form-control" id="comment" style="resize:none;height:150px;"
-                                    placeholder="Please Provide Additional Details:(tickets/convictions, what type of job you expect and comments,date available to start)"></textarea>
+                                <textarea class="form-control" id="h-adtn-dtls" name="h-adtn-dtls" style="resize:none;height:150px;"
+                                    placeholder="Please Provide Additional Details:(tickets/convictions, what type of job you expect and comments,date available to start)"
+                                    required></textarea>
                             </div>
                             <p class="error-msg">Please Enter Additional Details.</p>
-                            <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn"><span><i class="fa fa-paper-plane"></i></span>&nbsp;Submit</button>
+                            <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn" id="bnf-home-sbmt-btn"><span><i
+                                        class="fa fa-paper-plane"></i></span>&nbsp;Submit</button>
                         </form>
                     </div>
                 </div>
@@ -309,7 +310,8 @@
 
         </div>
     </footer>
-    <div class="btn btn-default bnf-glb-btn bnf-frm-btn bnf-quick-fixed-btn" data-toggle="modal" data-target="#myModal">Quick Quote</div>
+    <div class="btn btn-default bnf-glb-btn bnf-frm-btn bnf-quick-fixed-btn" data-toggle="modal" data-target="#myModal">Quick
+        Quote</div>
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -321,27 +323,32 @@
                     <h4 class="modal-title">Quick Quote</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Best rates and on time delivery. Your load is our responsibility.Please fill out form below & a team member will contact you with a Quick Quote</p>
+                    <p>Best rates and on time delivery. Your load is our responsibility.Please fill out form below & a
+                        team member will contact you with a Quick Quote</p>
                     <div class="bnf-quick-form-ctnr clearfix">
                         <form action="#" method="post">
                             <div class="form-group">
                                 <label for="name">Name:</label>
-                                <input type="text" class="form-control" id="name">
+                                <input type="text" class="form-control" name="name" id="name">
                             </div>
                             <div class="form-group">
                                 <label for="mobile">Phone Number:</label>
-                                <input type="text" class="form-control" id="mobie">
+                                <input type="text" class="form-control" name="mobile" id="mobile">
                             </div>
                             <div class="form-group">
                                 <label for="cname">Company Name:</label>
-                                <input type="text" class="form-control" id="cname">
+                                <input type="text" class="form-control" name="cname" id="cname">
                             </div>
                             <div class="form-group">
                                 <label for="mail">Email:</label>
-                                <input type="email" class="form-control" id="mail">
+                                <input type="email" class="form-control" name="mail" id="mail">
                             </div>
-
-                            <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn">Submit</button>
+                            <div class="form-group">
+                                <label for="comment">Comments:</label>
+                                <textarea class="form-control" id="ccomment" name="comment" style="resize:none;height:120px;"
+                                    placeholder="Comments" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn" id="bnf-qk-qte-sbmt">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -356,7 +363,8 @@
         <button class="bnf-glb-btn bnf-sclbtn" id="go-up"><i class="ion ion-ios-arrow-up"></i> </button>
     </div>
     <script>
-        var bnfPageY, bnfBodyTop;
+        var bnfPageY, bnfBodyTop, hName, hPhone, hEmail, hExep, hPosition, hMilleage, hAdtnDtls;
+        var qName,qPhone,qCname,qMail;
         $(document).ready(function () {
             $(".bnf-hilt-btn").on("click", bnfFormCtnrPosition);
             $("#go-up").on("click", goUp)
@@ -382,6 +390,11 @@
             } else {
                 $("#go-up").removeClass("go-up-show");
             }
+        }
+        window.submitForm = function (e) {
+            e.preventDefault();
+            var rawData = JSON.parse(JSON.stringify($(this).serializeArray()));
+            console.log(rawData);
         }
     </script>
 </body>
