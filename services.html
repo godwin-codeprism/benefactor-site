@@ -198,7 +198,7 @@
                 <div class="modal-body">
                     <p>Best rates and on time delivery. Your load is our responsibility.Please fill out form below & a team member will contact you with a Quick Quote</p>
                     <div class="bnf-quick-form-ctnr clearfix">
-                        <form action="#" method="post">
+                        <form id="quickQuoteModel">
                             <div class="form-group">
                                 <label for="name">Name:</label>
                                 <input type="text" class="form-control" name="name" id="name">
@@ -256,11 +256,30 @@
                 $("#go-up").removeClass("go-up-show");
             }
         }
-        window.submitForm = function (e) {
-            e.preventDefault();
+        function parseFormData(event){
+            event.preventDefault();
+            var trStr = "";
             var rawData = JSON.parse(JSON.stringify($(this).serializeArray()));
-            console.log(rawData);
+            for (i = 0; i < rawData.length; i++) {
+                trStr += '<tr style="background-color:aliceblue;height:45px;"><td>' + (i + 1) +
+                    '</td><td style="text-align:left;padding-left:10px;">'+rawData[i].name+'</td><td>'+rawData[i].value+'</td></tr>'
+                }
+            sendMail(trStr);
         }
+        function sendMail(data) {
+            $.ajax({
+                type: "POST",
+                url: "./endpoints/send-mail.php",
+                dataType: 'text',
+                data: {
+                    myData: data
+                },
+                complete: function (r) {
+                    console.log(r);
+                }
+            })
+        }
+        $("#quickQuoteModel").submit(parseFormData);
     </script>
 </body>
 

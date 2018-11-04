@@ -1,53 +1,46 @@
 <?php
     require_once('vendor/autoload.php');
-    $data = json_decode($_POST["myData"]);;
-    $Name = $data -> Name;
-    $Home_address = $data -> Home_address;
-    $Mobile_number = $data -> Mobile_number;
-    $Email_address = $data -> Email_address;
-    $Contact_method = $data -> Contact_method;
-    $Message = $data -> Message;
-
+    $trdata = $_POST["myData"];
 
     $Email = new PHPMailer;
 
     $Email -> isSMTP();
 
-    $Email -> SMTPAuth = false;
+    $Email -> SMTPAuth = true;
 
     //$Email -> SMTPDebug = 2;
 
-    $Email -> Host = 'a2plcpnl0920.prod.iad2.secureserver.net';
+    $Email -> Host = 'sg2plcpnl0172.prod.sin2.secureserver.net';
 
-    $Email -> Username = 'Info@cursivehomenumbers.com';
+    $Email -> Username = 'godwin@godwinvc.com';
 
-    $Email -> Password = 'Password1!';
+    $Email -> Password = 'reyasesino_22';
 
     $Email -> SMTPSecure = 'ssl';
 
     $Email -> Port = '465';
 
 
-    $Email -> From = "Info@cursivehomenumbers.com";
+    $Email -> From = "godwin@godwinvc.com";
 
-    $Email -> FromName = "Cursive home numbers";
+    $Email -> FromName = "BENEFACTOR LOGISTICS LIMITED";
 
-    $Email -> addReplyTo('Info@cursivehomenumbers.comm','BENEFACTOR LOGISTICS LIMITED');
+    $Email -> addReplyTo('godwin@godwinvc.com','BENEFACTOR LOGISTICS LIMITED');
 
-    $Email -> AddAddress ('rajakrishnavase123@gmail.com','Cursive home numbers');
+    // $Email -> AddAddress ('benefactorlogistics@gmail.com','BENEFACTOR LOGISTICS LIMITED');
+    $Email -> AddAddress ('godwin@godwinvc.com','BENEFACTOR LOGISTICS LIMITED');
 
 
-    $Email -> Subject = "New Inquiry From Cursivehomenumbers.com";
+    $Email -> Subject = "New Quick quote to Benefactor Logistics";
 
-    $Email -> Body = "<div style='background-color: white;width: 100%;height: 100%;box-shadow: 0 -25px 40px 0 rgba(0,0,0,.12);margin-top: -16px;display: flex;justify-content: center;align-items: center;'><div style='width: 90%;height: 90%;box-shadow: -1px 3px 4px rgba(0,0,0,0.22);background-color: #f2f2f2;padding: 1%;margin-top: 2%;font-family: calibri;border: 2px solid white;border-radius: 4px;font-size: 1.1em;'><p>New Inquiry From ".$Name.",</p><p><strong>Name: </strong>".$Name."</p><p><strong>Home Address: </strong>".$Home_address."</p><p><strong>Telephone Number: </strong>".$Mobile_number."</p><p><strong>Email Address: </strong><a href='".$Email_address."'>".$Email_address."</a></p><p><strong>Preferred method of contact: </strong>".$Contact_method.".</p><p><strong>Message: </strong>".$Message.".</p></div></div>";
-
-    $Email -> AltBody = "Name: ".$Name."<br/>Home Address: ".$Home_address."<br/>Telephone Number: ".$Mobile_number."<br/>Email: ".$Email_address."<br/>Preferred contact method: ".$Contact_method."<br/>Message: ".$Message;
+    $Email -> Body = '<body style="margin:0px auto;"><h3>Quick Quote from Benefactor</h3><table width="100%" style="font-family: calibri;font-size: 18px;text-align: center;border: 1px solidcornflowerblue;"><thead style="height: 50px;background: cornflowerblue;color: white;"><tr style="text-align:center"><th>Sno</th><th>Info Type</th><th>Info</th></tr></thead><tbody> '.$trdata.' </tbody></table></body>';
+    $Email->IsHTML(true); 
 
     //echo !extension_loaded('openssl')?"Not Available <br/>":"Available <br/>";
 
     if($Email->send()){
         echo 'ok';
     }else{
-        echo 'error';
+        echo $Email->ErrorInfo;
     }
 ?>
