@@ -28,7 +28,7 @@
     $Email -> addReplyTo('godwin@godwinvc.com','BENEFACTOR LOGISTICS LIMITED');
 
     // $Email -> AddAddress ('benefactorlogistics@gmail.com','BENEFACTOR LOGISTICS LIMITED');
-    $Email -> AddAddress ('godwin@godwinvc.com','BENEFACTOR LOGISTICS LIMITED');
+    $Email -> AddAddress ('benefactorlogistics@gmail.com','BENEFACTOR LOGISTICS LIMITED');
 
 
     $Email -> Subject = "New Quick quote to Benefactor Logistics";
