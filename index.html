@@ -221,25 +221,25 @@
                         <form id="quickQuote">
                             <div class="form-group">
                                 <!-- <label for="name">Name:</label> -->
-                                <input type="text" class="form-control" id="hname" name="hname" placeholder="Name"
+                                <input type="text" class="form-control" id="hname" name="Name" placeholder="Name"
                                     required>
                                 <p class="error-msg">Please Enter Name.</p>
                             </div>
                             <div class="form-group">
                                 <!-- <label for="phone">Phone:</label> -->
-                                <input type="text" class="form-control" id="hphone" name="hphone" placeholder="Phone"
+                                <input type="text" class="form-control" id="hphone" name="Phone" placeholder="Phone"
                                     required>
                                 <p class="error-msg">Please Enter Phone Number.</p>
                             </div>
                             <div class="form-group">
                                 <!-- <label for="email">Email:</label> -->
-                                <input type="email" class="form-control" id="hemail" name="hemail" placeholder="Email"
+                                <input type="email" class="form-control" id="hemail" name="Email" placeholder="Email"
                                     required>
                                 <p class="error-msg">Please Enter Email.</p>
                             </div>
                             <div class="form-group">
                                 <!-- <label for="sel1">Commercial Driving Experience:</label> -->
-                                <select class="form-control" id="hexep" name="hexep" required>
+                                <select class="form-control" id="hexep" name="Select Commercial Driving Experience" required>
                                     <option selected="true" disabled="disabled">--Select Commercial Driving
                                         Experience--</option>
                                     <option>Less than 1 year</option>
@@ -251,7 +251,7 @@
                             </div>
                             <div class="form-group">
                                 <!-- <label for="sel2">Position Interested In:</label> -->
-                                <select class="form-control" id="hposition" name="hposition" required>
+                                <select class="form-control" id="hposition" name="Position Interested In" required>
                                     <option selected="true" disabled="disabled">--Position Interested In--</option>
                                     <option>Company Driver</option>
                                     <option>Owner Operator</option>
@@ -260,7 +260,7 @@
                             </div>
                             <div class="form-group">
                                 <!-- <label for="sel3">Mileage Requested:</label> -->
-                                <select class="form-control" id="hmilleage" name="hmilleage" required>
+                                <select class="form-control" id="hmilleage" name="Mileage Requested" required>
                                     <option selected="true" disabled="disabled">--Mileage Requested--</option>
                                     <option>Local Home Daily Ontario</option>
                                     <option>Local Home Daily US/Canada</option>
@@ -271,12 +271,12 @@
                             </div>
                             <div class="form-group">
                                 <!-- <label for="comment">Please Provide Additional Details:</label> -->
-                                <textarea class="form-control" id="h-adtn-dtls" name="h-adtn-dtls" style="resize:none;height:150px;"
+                                <textarea class="form-control" id="h-adtn-dtls" name="Additional Details" style="resize:none;height:150px;"
                                     placeholder="Please Provide Additional Details:(tickets/convictions, what type of job you expect and comments,date available to start)"
                                     required></textarea>
                             </div>
                             <p class="error-msg">Please Enter Additional Details.</p>
-                            <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn" id="bnf-home-sbmt-btn"><span><i
+                            <button type="submit" class="btn-danger btn-block" style="border-radius: 25px;"id="home-submit"><span><i
                                         class="fa fa-paper-plane"></i></span>&nbsp;Submit</button>
                         </form>
                     </div>
@@ -332,32 +332,37 @@
                         <form id="quickQuoteModel">
                             <div class="form-group">
                                 <label for="name">Name:</label>
-                                <input type="text" class="form-control" name="name" id="name">
+                                <input type="text" class="form-control" name="Name" id="name">
                             </div>
                             <div class="form-group">
                                 <label for="mobile">Phone Number:</label>
-                                <input type="text" class="form-control" name="mobile" id="mobile">
+                                <input type="text" class="form-control" name="Phone Number" id="mobile">
                             </div>
                             <div class="form-group">
                                 <label for="cname">Company Name:</label>
-                                <input type="text" class="form-control" name="cname" id="cname">
+                                <input type="text" class="form-control" name="Company Name" id="cname">
                             </div>
                             <div class="form-group">
                                 <label for="mail">Email:</label>
-                                <input type="email" class="form-control" name="mail" id="mail">
+                                <input type="email" class="form-control" name="Email" id="mail">
                             </div>
                             <div class="form-group">
                                 <label for="comment">Comments:</label>
-                                <textarea class="form-control" id="ccomment" name="comment" style="resize:none;height:120px;"
+                                <textarea class="form-control" id="ccomment" name="Comments" style="resize:none;height:120px;"
                                     placeholder="Comments" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn" id="bnf-qk-qte-sbmt">Submit</button>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-sm-6"><button type="submit" class="btn btn-danger btn-block" id="modelSubmit"
+                                            style="border-radius: 25px;">Submit</button></div>
+                                    <div class="col-sm-6"><button type="button" class="btn btn-danger btn-block"
+                                            data-dismiss="modal" style="border-radius: 25px;">Cancel</button></div>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger bnf-glb-btn" data-dismiss="modal">Close</button>
-                </div>
+                
             </div>
 
         </div>
@@ -400,7 +405,27 @@
             }
         }
 
-        function sendMail(data) {
+        function parseFormData(event) {
+            if (event.target.id == "quickQuoteModel") {
+                $('#modelSubmit').html('<i class="fa fa-cog fa-spin fa-lg fa-fw"></i> Submitting..');
+                $('#modelSubmit').addClass('disabled');
+            }
+            if (event.target.id == "quickQuote") {
+                $('#home-submit').html('<i class="fa fa-cog fa-spin fa-lg fa-fw"></i> sending..');
+                $('#home-submit').addClass('disabled');
+            }
+            event.preventDefault();
+            var trStr = "";
+            var rawData = JSON.parse(JSON.stringify($(this).serializeArray()));
+            for (i = 0; i < rawData.length; i++) {
+                trStr += '<tr style="background-color:aliceblue;height:45px;"><td>' + (i + 1) +
+                    '</td><td style="text-align:left;padding-left:10px;">' + rawData[i].name + '</td><td>' + rawData[i]
+                    .value + '</td></tr>'
+            }
+            sendMail(trStr, event.target.id);
+        }
+
+        function sendMail(data, clikedID) {
             $.ajax({
                 type: "POST",
                 url: "./endpoints/send-mail.php",
@@ -409,30 +434,41 @@
                     myData: data
                 },
                 complete: function (r) {
-                    console.log(r);
+                    if (r.responseText === 'ok') {
+
+                        if (clikedID == "quickQuoteModel") {
+                            $('#modelSubmit').html('Message Sent Sucessfully');
+                            $('#modelSubmit').removeClass('btn-danger');
+                            $('#modelSubmit').addClass('disabled');
+                            $('#modelSubmit').addClass('btn-success');
+                            $('#quickQuoteModel')[0].reset();
+                        }
+                        if (clikedID == "quickQuote") {
+                            $('#home-submit').html('Message Sent Sucessfully');
+                            $('#home-submit').removeClass('btn-danger');
+                            $('#home-submit').addClass('btn-success');
+                            $('#home-submit').addClass('disabled');
+                            $('#quickQuote')[0].reset();
+                        }
+                    } else {
+                        if (clikedID == "quickQuoteModel") {
+                            alert("Something went wrong. Please try again");
+                            $('#modelSubmit').removeClass('disabled');
+                            $('#modelSubmit').html('Submit');
+                        }
+                        if (clikedID == "quickQuote") {
+                            alert("Something went wrong. Please try again");
+                            $('#home-submit').removeClass('disabled');
+                            $('#home-submit').html('Submit');
+                        }
+                    }
                 }
             })
         }
-
-        function submit(e) {
-            e.preventDefault();
-            console.log("working");
-        }
-
-        function parseFormData(event){
-            event.preventDefault();
-            var trStr = "";
-            var rawData = JSON.parse(JSON.stringify($(this).serializeArray()));
-            for (i = 0; i < rawData.length; i++) {
-                trStr += '<tr style="background-color:aliceblue;height:45px;"><td>' + (i + 1) +
-                    '</td><td style="text-align:left;padding-left:10px;">'+rawData[i].name+'</td><td>'+rawData[i].value+'</td></tr>'
-                }
-            sendMail(trStr);
-        }
         $("#quickQuoteModel").submit(parseFormData);
         $("#quickQuote").submit(parseFormData);
-        
     </script>
+
 </body>
 
 </html>

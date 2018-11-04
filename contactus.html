@@ -98,38 +98,38 @@
                                 <div class="form-group row">
                                     <div class="col-sm-6">
                                         <label for="cfname">First Name:</label>
-                                        <input type="text" class="form-control" id="cfname" name="cfname" placeholder="First Name"
-                                            required>
+                                        <input type="text" class="form-control" id="cfname" name="First Name"
+                                            placeholder="First Name" required>
                                         <p class="error-msg">Please Enter First Name.</p>
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="clname">Last Name:</label>
-                                        <input type="text" class="form-control" id="clname" name="clname" placeholder="Last Name"
-                                            required>
+                                        <input type="text" class="form-control" id="clname" name="Last Name"
+                                            placeholder="Last Name" required>
                                         <p class="error-msg">Please Enter Last Name.</p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="cphone">Phone:</label>
-                                    <input type="text" class="form-control" id="cphone" name="cphone" placeholder="Phone"
+                                    <input type="text" class="form-control" id="cphone" name="Phone" placeholder="Phone"
                                         required>
                                     <p class="error-msg">Please Phone Number.</p>
                                 </div>
                                 <div class="form-group">
                                     <label for="cemail">Email:</label>
-                                    <input type="email" class="form-control" id="cemail" name="cemail" placeholder="Email"
+                                    <input type="email" class="form-control" id="cemail" name="Email" placeholder="Email"
                                         required>
                                     <p class="error-msg">Please Enter Email.</p>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="ccomment">Comments:</label>
-                                    <textarea class="form-control" id="ccomment" name="ccomment" style="resize:none;height:150px;"
+                                    <textarea class="form-control" id="ccomment" name="Comments" style="resize:none;height:150px;"
                                         placeholder="Comments" required></textarea>
                                     <p class="error-msg">Enter Comments.</p>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-default bnf-glb-btn bnf-frm-btn" id="bnf-contact-submit"><span><i
+                                    <button type="submit" class="btn-danger btn-block" style="border-radius: 25px;" id="contact-submit"><span><i
                                                 class="fa fa-paper-plane"></i></span>&nbsp;Send</button>
                                 </div>
 
@@ -218,23 +218,23 @@
                         <form id="quickQuoteModel">
                             <div class="form-group">
                                 <label for="name">Name:</label>
-                                <input type="text" class="form-control" name="name" id="name">
+                                <input type="text" class="form-control" name="Name" id="name">
                             </div>
                             <div class="form-group">
                                 <label for="mobile">Phone Number:</label>
-                                <input type="text" class="form-control" name="mobile" id="mobile">
+                                <input type="text" class="form-control" name="Phone Number" id="mobile">
                             </div>
                             <div class="form-group">
                                 <label for="cname">Company Name:</label>
-                                <input type="text" class="form-control" name="cname" id="cname">
+                                <input type="text" class="form-control" name="Company Name" id="cname">
                             </div>
                             <div class="form-group">
                                 <label for="mail">Email:</label>
-                                <input type="email" class="form-control" name="mail" id="mail">
+                                <input type="email" class="form-control" name="Email" id="mail">
                             </div>
                             <div class="form-group">
                                 <label for="comment">Comments:</label>
-                                <textarea class="form-control" id="ccomment" name="comment" style="resize:none;height:120px;"
+                                <textarea class="form-control" id="ccomment" name="Comments" style="resize:none;height:120px;"
                                     placeholder="Comments" required></textarea>
                             </div>
                             <div class="container-fluid">
@@ -281,8 +281,14 @@
         }
 
         function parseFormData(event) {
-            $('#modelSubmit').html('<i class="fa fa-cog fa-spin fa-lg fa-fw"></i> Submitting..');
-            $('#modelSubmit').addClass('disabled');
+            if (event.target.id == "quickQuoteModel") {
+                $('#modelSubmit').html('<i class="fa fa-cog fa-spin fa-lg fa-fw"></i> Submitting..');
+                $('#modelSubmit').addClass('disabled');
+            }
+            if (event.target.id == "contactUs") {
+                $('#contact-submit').html('<i class="fa fa-cog fa-spin fa-lg fa-fw"></i> sending..');
+                $('#contact-submit').addClass('disabled');
+            }
             event.preventDefault();
             var trStr = "";
             var rawData = JSON.parse(JSON.stringify($(this).serializeArray()));
@@ -291,10 +297,10 @@
                     '</td><td style="text-align:left;padding-left:10px;">' + rawData[i].name + '</td><td>' + rawData[i]
                     .value + '</td></tr>'
             }
-            sendMail(trStr);
+            sendMail(trStr, event.target.id);
         }
 
-        function sendMail(data) {
+        function sendMail(data, clikedID) {
             $.ajax({
                 type: "POST",
                 url: "./endpoints/send-mail.php",
@@ -304,15 +310,32 @@
                 },
                 complete: function (r) {
                     if (r.responseText === 'ok') {
-                        $('#modelSubmit').html('Message Sent Sucessfully');
-                        $('#modelSubmit').removeClass('btn-danger');
-                        $('#modelSubmit').addClass('disabled');
-                        $('#modelSubmit').addClass('btn-success');
-                        $('#quickQuoteModel')[0].reset();
-                    }else{
-                        alert("Something went wrong. Please try again");
-                        $('#modelSubmit').removeClass('disabled');
-                        $('#modelSubmit').html('Submit');
+
+                        if (clikedID == "quickQuoteModel") {
+                            $('#modelSubmit').html('Message Sent Sucessfully');
+                            $('#modelSubmit').removeClass('btn-danger');
+                            $('#modelSubmit').addClass('disabled');
+                            $('#modelSubmit').addClass('btn-success');
+                            $('#quickQuoteModel')[0].reset();
+                        }
+                        if (clikedID == "contactUs") {
+                            $('#contact-submit').html('Message Sent Sucessfully');
+                            $('#contact-submit').removeClass('btn-danger');
+                            $('#contact-submit').addClass('btn-success');
+                            $('#contact-submit').addClass('disabled');
+                            $('#contactUs')[0].reset();
+                        }
+                    } else {
+                        if (clikedID == "quickQuoteModel") {
+                            alert("Something went wrong. Please try again");
+                            $('#modelSubmit').removeClass('disabled');
+                            $('#modelSubmit').html('Submit');
+                        }
+                        if (clikedID == "contactUs") {
+                            alert("Something went wrong. Please try again");
+                            $('#contact-submit').removeClass('disabled');
+                            $('#contact-submit').html('Submit');
+                        }
                     }
                 }
             })
